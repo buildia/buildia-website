@@ -4,12 +4,35 @@ body{
   padding: 0;
   margin: 0;
   background-color: #f4f4f4;
+  --buildia-blue: rgb(74 106 252);
 }
 
-/* Global */
-ul{
+*{
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+
+a{
+  text-decoration: none;
+  color: var(--buildia-blue);
+}
+
+p, h1, a{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+p{
+  font-size: 20px;
+}
+
+footer p{
+  font-size: 12px;
+}
+
+h1{
+  margin: 30px 0px 40px 0px;
 }
 
 /* Header */
@@ -116,8 +139,9 @@ header .login-signup {
 
 /* Main */
 
-main {
-  padding: 0px 30px;
+#main-home {
+  padding: 30px;
+  min-height: 100vh;
 }
 
 #main-title{
@@ -142,17 +166,46 @@ footer {
   height: auto;
 }
 
+#about-main{
+  box-sizing: border-box;
+  width: 50%;
+  padding: 30px 30px;
+}
+
+
+#about-main li{
+  list-style: none;
+}
+
+#contact-main{
+  padding: 30px;
+  min-height: 100vh;
+}
+
+#contact-main li{
+  list-style: none;
+}
+
+.space-30{
+  padding-top: 30px;
+}
+
+.space-10{
+  padding-top: 10px;
+}
 
 /*Media Queries*/
 
 @media(max-width: 768px){
   header .navbar, header .login-signup,
   main h1{
-      float: none;
       text-align: center;
   }
-  header{
-      padding-bottom: 20px;
+  #about-main{
+    width: 100%;
+  }
+  #contact-main{
+    text-align: center;
   }
   main h1{
       margin-top: 40px;
